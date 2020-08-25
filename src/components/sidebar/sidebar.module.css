@@ -1,0 +1,46 @@
+.wrapper {
+    position: absolute;
+    width: 260px;
+    left: 1px;
+    top: 0px;
+    background: #FFF;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.invoice {
+    width: 163px;
+    height: 33px;
+    margin: 15% auto ;
+    justify-content: center;
+    color:#fff;
+    background: #27AE60;
+    border-radius: 30px;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: none;
+    /* letter-spacing: 0.2px; */
+}
+ul {
+    font-size: 0.9em;
+    line-height: 15px;
+    color: #647787;    
+}
+li {
+    list-style: none;
+    font-size: 0.9em;
+    line-height: 15px;
+    color: #647787;
+    display: flex;
+    /* background-color: brown; */
+    margin: 5%;
+}
+.icons {
+    font-size: 1.7em;
+    margin-right: 3%;
+    /* background-color: burlywood; */
+}
+h6 {
+/* background-color: chartreuse; */
+/* display: flex; */
+}
+
