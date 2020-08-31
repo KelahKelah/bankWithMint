@@ -1,6 +1,7 @@
 import React from 'react';
 // import Layout from '../../components/layout/layout';
 import styles from './merchant.module.css';
+import ChartImg from '../../assets/miniChart.svg';
 import MyChart from '../../components/charts/dailyChart';
 import MainChart from '../../components/charts/mainChart';
 
@@ -15,28 +16,28 @@ const Merchant = () => {
                             <p>Daily Transaction Volume</p>
                             <p>#300000</p>
                         </div>
-                        <MyChart />
+                        <img src={ChartImg} alt="Dialy chart" />
                     </div>
                     <div className={`col-md-3 ${styles.item}`}>
                         <div className ={`${styles.daily}`}>
                             <p>Daily Transaction Volume</p>
                             <p>#300000</p>
                         </div>
-                        <MyChart />
+                        <img src={ChartImg} alt="Dialy chart" />
                     </div>
                     <div className={`col-md-3 ${styles.item}`}>
                         <div className ={`${styles.daily}`}>
                             <p>Daily Transaction Volume</p>
                             <p>#300000</p>
                         </div>
-                        <MyChart />
+                        <img src={ChartImg} alt="Dialy chart" />
                     </div>
                     <div className={`col-md-3 ${styles.item}`}>
                         <div className ={`${styles.daily}`}>
                             <p>Daily Transaction Volume</p>
                             <p>#300000</p>
                         </div>
-                        <MyChart />
+                        <img src={ChartImg} alt="Dialy chart" />
                     </div>
                 </div>
                 <div className={`row ${styles.rowTwo}`}>

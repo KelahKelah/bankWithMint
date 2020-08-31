@@ -1,7 +1,6 @@
 import React from 'react';
 import {Chart } from 'react-charts';
 
-
 const MainChart = () => {
    const data = React.useMemo(() => {
        return(
@@ -33,7 +32,7 @@ const MainChart = () => {
    }, [])
 
    const lineChart = (
-       <div style = {{width: '700px', height: '500px' }}>
+       <div style = {{width: '700px', height: '500px' , }}>
             <Chart data={data} axes={axes} />
        </div>
    )
