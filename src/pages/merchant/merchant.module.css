@@ -1,0 +1,20 @@
+.item {
+    background-color: #fff;
+    /* background-color: chartreuse; */
+    border: 1px solid #EEF8FD;
+    border-radius: 2px;
+    display: flex;
+    /* margin: 0.2%; */
+}
+.rowOne {
+padding: 3%;
+}
+.daily {
+    /* word-wrap: none; */
+font-size: 0.6em;
+color: #787C90;
+}
+.itemTwo {
+    background-color: white;
+
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './sidebar.module.css';
 import { BiWallet, BiWalletAlt, BiTachometer, BiRadioCircleMarked, BiSpreadsheet, BiUser} from 'react-icons/bi';
-import {} from 'react-icons/fa';
+// import {} from 'react-icons/fa';
 
 
 const Sidebar = () => {
@@ -10,7 +10,6 @@ const Sidebar = () => {
         <div className={styles.wrapper}>
             <button className={styles.invoice}>Generate Invoice</button>
             <div className={styles.content} >
-                <h6>Main</h6>
                 <ul>
                     <li><BiTachometer className={styles.icons} />All Payments</li>
                 </ul>
