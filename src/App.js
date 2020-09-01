@@ -8,9 +8,11 @@ import Merchant from './pages/merchant/merchant';
 function App() {
   return (
     <div className="App">
-      {/* <Header /> */}
-      {/* <Siderbar /> */}
-      <Merchant />
+      <Header />
+      <div className='item'>
+        <Siderbar />
+        <Merchant />
+      </div>
     </div>
   );
 }

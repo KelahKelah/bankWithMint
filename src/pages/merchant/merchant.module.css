@@ -1,20 +1,50 @@
 .item {
     background-color: #fff;
-    /* background-color: chartreuse; */
     border: 1px solid #EEF8FD;
     border-radius: 2px;
+    margin: auto;
     display: flex;
-    /* margin: 0.2%; */
 }
 .rowOne {
-padding: 3%;
+padding: 3% 0%;
+
+/* background-color: #FFF; */
+}
+.subCol {
+    border-bottom: 2px solid #f6f9ff;
 }
 .daily {
-    /* word-wrap: none; */
 font-size: 0.6em;
+padding: 15px 30px;
+line-height: 0.5em;
 color: #787C90;
+
 }
 .itemTwo {
     background-color: white;
+    border: 2px #f6f9ff solid;
+}
+.progressBarContainer {
+    background-color: #FDC203;
+    border: solid 1px #b3b3b3;
+    width: 100%;
+}
+.progressBar {
+    background-color: #27AE60;
+    width: 75%;
+    height: 5px;
+}
+.yellow {
+color: yellow;
+font-weight: 600;
+}
+.green {
+color:green;
+font-weight: 600;
+
+}
+.blue {
+    color: blue;
+    font-weight: 600;
 
 }
