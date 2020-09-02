@@ -10,6 +10,7 @@
     width: 163px;
     height: 33px;
     margin: 15% auto ;
+    display: flex;
     justify-content: center;
     color:#fff;
     background: #27AE60;
@@ -19,7 +20,14 @@
     font-size: 0.9em;
     border: none;
 }
-ul {
+.sideBarHeader {
+display: flex;
+justify-content: center;
+}
+.active {
+    background-color: #647787;
+}
+.ulHeader {
     font-size: 0.9em;
     line-height: 15px;
     color: #647787;    
@@ -30,16 +38,11 @@ li {
     line-height: 15px;
     color: #647787;
     display: flex;
-    /* background-color: brown; */
     margin: 5%;
 }
 .icons {
     font-size: 1.7em;
     margin-right: 3%;
-    /* background-color: burlywood; */
 }
-h6 {
-/* background-color: chartreuse; */
-/* display: flex; */
-}
+
 

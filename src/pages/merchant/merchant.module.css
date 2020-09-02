@@ -6,19 +6,21 @@
     display: flex;
 }
 .rowOne {
-padding: 3% 0%;
-
-/* background-color: #FFF; */
+    padding: 3% 0%;
 }
 .subCol {
     border-bottom: 2px solid #f6f9ff;
+    font-family: 'Noto Sans JP', sans-serif;
+}.header {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
 }
-.daily {
-font-size: 0.6em;
-padding: 15px 30px;
-line-height: 0.5em;
-color: #787C90;
 
+.daily {
+    font-size: 0.6em;
+    padding: 15px 30px;
+    line-height: 0.5em;
+    color: #787C90;
 }
 .itemTwo {
     background-color: white;
@@ -35,16 +37,108 @@ color: #787C90;
     height: 5px;
 }
 .yellow {
-color: yellow;
-font-weight: 600;
+    color: yellow;
+    font-weight: 600;
+    margin: 5px;
 }
 .green {
-color:green;
-font-weight: 600;
-
+    color:green;
+    font-weight: 600;
+    margin: 5px;
 }
 .blue {
     color: blue;
     font-weight: 600;
+    margin: 5px;
+}
+.chartItem {
+    display: flex;
+    margin: 2.5% 0%;
+    /* background-color: green; */
+}
+.date {
+    font-weight: 700;
+    font-size: 1em;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.dateSearch {
+    border-style: none;
+    border: 1px #e3e5e8 solid;
+    border-radius: 4.5px;
+    background-color: #fff;
+    padding: 1%;
+    margin: 0% 15%;
+}
+.caret {
+    color: #CCCFD4;
+}
+.caretLeft, .caretRight {
+    border: 1px #e3e5e8 solid;
+    border-radius: 4.5px;
+    background-color: #fff;
+    font-size: 2em;
+}
+.tableRow {
+    background-color: #fff;
+}
+.rowThree {
+    background-color: #fff;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 5% 0%;
+    margin: 3% 0;
+}
+.tableHeader {
+    display: flex;
+    /* background-color: blueviolet; */
+    margin: 2% 0%;
+}
+.sideItem {
+    width: 30px;
+    height: 30px;
+    padding: 2%;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #7F8FA4;
+    color: #fff;
+    margin: 0% 1%;
+}
+.tableSearch {
+    margin: auto;
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    background-color:#f6f9ff;
+}
+.dropdown {
+    background-color:#f6f9ff;
+    border-top-style: none;
+}
+.tableHead {
+    line-height: 30px;
+}
+.tableBody {
+    line-height: 50px;
+    background-color: darkorange;
+}
+
+.buttonGreen {
+    font-size: 13px;
+    color: #27AE60;
+    line-height: 15px;
+    border: 2px solid #27AE60;
+    border-radius: 40px;
+    background: transparent;
+    transition: all 0.3s ease 0s;
+}
+.buttonYellow {
+    font-size: 13px;
+    color: #EBC315;
+    line-height: 15px;
+    border: 2px solid #EBC315;
+    border-radius: 40px;
+    background: transparent;
+    transition: all 0.3s ease 0s;
 
 }

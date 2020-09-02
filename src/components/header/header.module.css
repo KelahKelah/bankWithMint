@@ -16,7 +16,7 @@
 .formSearch {
     /* background-color: red; */
     position: relative;
-    left: 50px;
+    left: 7%;
 }
 .inputField {
     font-family: Segoe UI;
@@ -33,13 +33,27 @@
 .menu {
     display: flex;
     font-family: Segoe UI;
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 19px;
     color: #647787;
     /* background-color: blue; */
     position: relative;
-
+    left: 35%;
 } 
+.count {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #1875F0;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    left: -13px;
+    top: -8px
+}
+.list {
+    padding: 0% 8%;
+}
 .photo {
     width: 40px;
     height: 40px;
