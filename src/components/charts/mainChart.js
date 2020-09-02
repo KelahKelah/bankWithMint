@@ -32,7 +32,7 @@ const MainChart = () => {
    }, [])
 
    const lineChart = (
-       <div style = {{width: '350px', height: '350px' , }}>
+       <div style = {{width: '100%', height: '75%'  }}>
             <Chart data={data} axes={axes} />
        </div>
    )

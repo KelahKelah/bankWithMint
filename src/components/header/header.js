@@ -16,10 +16,10 @@ const Header = () => {
                 <input type="text" placeholder="Search" aria-label="Search" className={styles.inputField} />
             </form>
             <ul className={styles.menu}>
-                <li>Support</li>
-                <li>FAQ</li>
-                <li><FaRegBell /></li>
-                {/* <li>
+                <li className={styles.list}>Support</li>
+                <li className={styles.list}>FAQ</li>
+                <li className={styles.list}><FaRegBell /><div className={styles.count}>8</div></li>
+                {/* <li className={styles.list}>
                     <p>Oluwaleke Ojo</p>
                     <img src={ProfileImg} alt={'Profile'} className={styles.photo} />
                 </li> */}
