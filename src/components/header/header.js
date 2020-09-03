@@ -18,8 +18,8 @@ const Header = () => {
             <ul className={styles.menu}>
                 <li className={styles.list}>Support</li>
                 <li className={styles.list}>FAQ</li>
-                <li className={styles.list}><FaRegBell /><div className={styles.count}>8</div></li>
-                {/* <li className={styles.list}>
+                <li className={styles.list}><FaRegBell className={styles.notificationIcon}/><div className={styles.notificationCount}>8</div></li>
+                {/* <li className={styles.lister}>
                     <p>Oluwaleke Ojo</p>
                     <img src={ProfileImg} alt={'Profile'} className={styles.photo} />
                 </li> */}

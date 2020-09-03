@@ -20,6 +20,11 @@
     font-size: 0.9em;
     border: none;
 }
+.content {
+    /* background-color: lightgreen; */
+    /* padding: 10% 0%; */
+    /* line-height: 10px; */
+}
 .sideBarHeader {
 display: flex;
 justify-content: center;
@@ -33,6 +38,7 @@ justify-content: center;
     color: #647787;    
 }
 li {
+    padding: 2% 0%;
     list-style: none;
     font-size: 0.9em;
     line-height: 15px;

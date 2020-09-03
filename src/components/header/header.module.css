@@ -15,32 +15,41 @@
 }
 .formSearch {
     /* background-color: red; */
+    /* border: deeppink; */
+    display: flex;
     position: relative;
-    left: 7%;
-}
+    left: 5%;
+}   
 .inputField {
     font-family: Segoe UI;
     font-size: 1em;
     color: #979797;    
     border: none;
+    /* background-color: dodgerblue; */
 }
 .searchIcon {
     font-family: Segoe UI;
-    font-size: 1em;
+    font-size: 1.7em;
     line-height: 16px;
     color: #979797;
+    /* background-color: darkviolet; */
+    margin-right: 5%;
 }
 .menu {
     display: flex;
+    align-self: center;
     font-family: Segoe UI;
     font-size: 1.1em;
     line-height: 19px;
     color: #647787;
-    /* background-color: blue; */
+    /* background-color: greenyellow; */
     position: relative;
     left: 35%;
 } 
-.count {
+.notificationIcon {
+    font-size: 1.2em;
+}
+.notificationCount {
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -52,10 +61,14 @@
     top: -8px
 }
 .list {
-    padding: 0% 8%;
+    /* padding: 0% 8%; */
+}
+.lister {
+    background-color: indigo;
 }
 .photo {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
+    background-color: greenyellow;
 }
