@@ -1,46 +1,45 @@
 import React from 'react';
-import {Chart } from 'react-charts';
+import {Line} from 'react-chartjs-2';
 
-const MainChart = () => {
-   const data = React.useMemo(() => {
-       return(
-       [
-           {
-               label: 'series',
-               data: [
-                   [1,2],
-                   [2,3],
-                   [3,4],
-                   [4,5],
-                   [3,4],
-                   [2,3],
-                   [1,2],
+ 
+class MyLine extends React.Component {  
 
-               ]
-           }
-       ]
-       )
-   }, [])
+        render(){
+            var data = {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [
+                {
+                    label: '',
+                    fill: false,
+                    lineTension: 0.1,
+                    // backgroundColor: 'linear-gradient(180deg, rgba(2, 148, 255, 0.45) 33.13%, rgba(255, 255, 255, 0.0001) 117.06%)',
+                    backgroundColor: 'rgba(2, 148, 255, 0.45)',
+                    borderColor: 'rgba(2, 148, 255, 0.45)',
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: 'rgba(2, 148, 255, 0.45)',
+                    pointBackgroundColor: '#fff',
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: 'rgba(2, 148, 255, 0.45)',
+                    pointHoverBorderColor: 'rgba(2, 148, 255, 0.45)',
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data: [65, 59, 80, 81, 56, 55, 40]
+                }
+                ]
+            };
+            return(
+                <div>
+                    <Line data={data} />
+                </div>
+            )
+        }
+        } 
+       
+        
+export default MyLine;
 
-   const axes = React.useMemo(() => {
-       return(
-       [
-           {primary: true, type: 'linear' ,position: 'bottom'},
-           {type: 'linear', position: 'left' }
-       ]
-       )
-   }, [])
-
-   const lineChart = (
-       <div style = {{width: '100%', height: '75%'  }}>
-            <Chart data={data} axes={axes} />
-       </div>
-   )
-
-   return(
-       <>
-       {lineChart}
-       </>
-   )
-}
-export default MainChart;
