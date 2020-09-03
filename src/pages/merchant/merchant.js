@@ -2,9 +2,8 @@ import React from 'react';
 // import Layout from '../../components/layout/layout';
 import styles from './merchant.module.css';
 import ChartImg from '../../assets/miniChart.svg';
-import MyChart from '../../components/charts/dailyChart';
-import MainChart from '../../components/charts/mainChart';
-import {BiChevronLeft , BiChevronRight, BiChevronDown, BiSearch, BiWifi0, BiCircle } from 'react-icons/bi';
+import MyLIne from '../../components/charts/mainChart';
+import {BiChevronLeft , BiChevronRight, BiSearch, BiCircle } from 'react-icons/bi';
 
 const Merchant = () => {
 
@@ -52,7 +51,7 @@ const Merchant = () => {
                             </div>
                         </div>
                        
-                        <MainChart />
+                        <MyLIne />
                     </div>
                     <div className={`col-md-4 ${styles.itemTwo}`}>
                         <div className={styles.subCol} >
@@ -76,15 +75,24 @@ const Merchant = () => {
                     </div>
                 </div>
                 <div className={styles.tableHeader}>
-                    <p>20 </p>
-                    <p>Out of 500 Payments </p>
+                    <p>20 Out of 500 Payments </p>
                     <span><BiSearch /></span>
                     <input type='search' placeholder='Search' className={styles.tableSearch} />
-                    <input type='select' placeholder='All' className={styles.dropdown} />
+
+                    <div className="dropdown">
+                        <button className={`btn btn-default dropdown-toggle ${styles.default}`} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pending
+                        </button>
+                        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a className="dropdown-item" href="#">All</a>
+                            <a className="dropdown-item" href="#">Pending</a>
+                            <a className="dropdown-item" href="#">Reconciled</a>
+                        </div>
+                    </div>
+                    {/* <input type='select' placeholder='All' className={styles.dropdown} /> */}
                 </div>
                 <h2>Payments</h2>
                 {/* THIRD ROW  */}
-            {/* <div className={'table-responsive'}>  */}
                 <table className={`table ${styles.rowThree}`}>
                     <thead className={styles.tableHead} >
                         <tr>
@@ -102,8 +110,7 @@ const Merchant = () => {
                             <td>$73430</td>
                             <td>1234567890</td>
                             <td>12:30</td>
-                            <button className={`btn btn-light ${styles.buttonYellow}`}><BiCircle />Pending</button>
-                            {/* <BiChevronDown /> */}
+                            <button className={`btn btn-light ${styles.buttonYellow}`}><BiCircle className={styles.iconsYellow} />Pending</button>
                         </tr>
 
                         <tr className={styles.tableRow}>
@@ -111,8 +118,7 @@ const Merchant = () => {
                             <td>$73430</td>
                             <td>1234567890</td>
                             <td>12:30</td>
-                            <button className={`btn btn-light ${styles.buttonGreen}`   }><BiCircle />Reconciled</button>
-                            {/* <BiChevronDown /> */}
+                            <button className={`btn btn-light ${styles.buttonGreen}`   }><BiCircle className={styles.iconsGreen}/>Reconciled</button>
                         </tr>
 
                         <tr className={styles.tableRow}>
@@ -120,8 +126,7 @@ const Merchant = () => {
                             <td>$73430</td>
                             <td>1234567890</td>
                             <td>12:30</td>
-                            <button className={`btn btn-light ${styles.buttonYellow}`   }><BiCircle />Pending</button>
-                            {/* <BiChevronDown /> */}
+                            <button className={`btn btn-light ${styles.buttonYellow}`   }><BiCircle className={styles.iconsYellow}/>Pending</button>
                         </tr>
 
                         <tr className={styles.tableRow}>
@@ -129,8 +134,7 @@ const Merchant = () => {
                             <td>$73430</td>
                             <td>1234567890</td>
                             <td>12:30</td>
-                            <button className={`btn btn-light ${styles.buttonGreen}`   }><BiCircle />Reconciled</button>
-                            {/* <BiChevronDown /> */}
+                            <button className={`btn btn-light ${styles.buttonGray}`   }><BiCircle className={styles.iconsGray}/>Un-Reconciled</button>
                         </tr>
 
                         <tr className={styles.tableRow}>
@@ -138,14 +142,38 @@ const Merchant = () => {
                             <td>$73430</td>
                             <td>1234567890</td>
                             <td>12:30</td>
-                            <button className={`btn btn-light ${styles.buttonGreen}`   }><BiWifi0 />Pending</button>
-                            {/* <BiChevronDown /> */}
+                            <button className={`btn btn-light ${styles.buttonGreen}`   }><BiCircle className={styles.iconsGreen}/>Reconciled</button>
+                        </tr>
+
+                        <tr className={styles.tableRow}>
+                            <td scope="row"><span className={styles.sideItem}>vw</span>Apple Mac book 15" 250 SSD 12GB</td>
+                            <td>$73430</td>
+                            <td>1234567890</td>
+                            <td>12:30</td>
+                            <button className={`btn btn-light ${styles.buttonYellow}`   }><BiCircle className={styles.iconsYellow}/>Pending</button>
+                        </tr>
+
+                        <tr className={styles.tableRow}>
+                            <td scope="row"><span className={styles.sideItem}>vw</span>Apple Mac book 15" 250 SSD 12GB</td>
+                            <td>$73430</td>
+                            <td>1234567890</td>
+                            <td>12:30</td>
+                            <button className={`btn btn-light ${styles.buttonGray}`   }><BiCircle className={styles.iconsGray}/>Un-Reconciled</button>
                         </tr>
 
                     </tbody>
                 </table>
-            {/* </div> */}
 
+                <div className={styles.tableFooter}>
+                    <p>1 Out of 50 Payments </p>   
+
+                    <div className={`btn-group ${styles.btnGroup}`}>
+                        <button type="button" className="btn btn-default">Previous</button>
+                        <button type="button" className="btn btn-primary">1</button>
+                        <button type="button" className="btn btn-default">2</button>
+                        <button type="button" className="btn btn-default">Next</button>
+                    </div>                
+                </div>
         </div>
     )
 }

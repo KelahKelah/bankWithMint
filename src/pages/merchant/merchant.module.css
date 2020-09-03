@@ -15,7 +15,6 @@
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 600;
 }
-
 .daily {
     font-size: 0.6em;
     padding: 15px 30px;
@@ -34,7 +33,7 @@
 .progressBar {
     background-color: #27AE60;
     width: 75%;
-    height: 5px;
+    height: 3px;
 }
 .yellow {
     color: yellow;
@@ -91,7 +90,11 @@
 }
 .tableHeader {
     display: flex;
-    /* background-color: blueviolet; */
+    margin: 2% 0%;
+    /* background-color: darkviolet; */
+}
+.tableFooter {
+    display: flex;
     margin: 2% 0%;
 }
 .sideItem {
@@ -105,7 +108,7 @@
     margin: 0% 1%;
 }
 .tableSearch {
-    margin: auto;
+    margin: 0% 10%;
     border-top: hidden;
     border-left: hidden;
     border-right: hidden;
@@ -113,7 +116,7 @@
 }
 .dropdown {
     background-color:#f6f9ff;
-    border-top-style: none;
+    width: 40%;
 }
 .tableHead {
     line-height: 30px;
@@ -122,8 +125,7 @@
     line-height: 50px;
     background-color: darkorange;
 }
-
-.buttonGreen {
+.buttonGreen, .iconsGreen {
     font-size: 13px;
     color: #27AE60;
     line-height: 15px;
@@ -140,5 +142,30 @@
     border-radius: 40px;
     background: transparent;
     transition: all 0.3s ease 0s;
-
+}
+.buttonGray {
+    font-size: 13px;
+    color: #7F8FA4;
+    line-height: 15px;
+    border: 2px solid #7F8FA4;
+    border-radius: 40px;
+    background: transparent;
+    transition: all 0.3s ease 0s;
+}
+.btnGroup {
+    border: 1px solid #E5E5E5  ; 
+    position: relative;
+    left: 55%;                                                                                                                                                                                                                      ;
+}
+.iconsGreen {
+    background-color: #27AE60;
+    border-radius: 50%; 
+}
+.iconsYellow {
+   background-color: #EBC315;
+   border-radius: 50%;
+}
+.iconsGray {
+    background-color: #7F8FA4;
+    border-radius: 50%;
 }
