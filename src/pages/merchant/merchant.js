@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './merchant.module.css';
 import ChartImg from '../../assets/miniChart.svg';
 import MyLIne from '../../components/charts/mainChart';
-import {BiChevronLeft , BiChevronRight, BiSearch, BiCircle } from 'react-icons/bi';
+import {BiChevronLeft , BiChevronRight, BiChevronDown,  BiSearch, BiCircle } from 'react-icons/bi';
 
 const Merchant = () => {
 
@@ -15,7 +15,7 @@ const Merchant = () => {
                             <p>Daily Transaction Volume</p>
                             <p>2,342</p>
                         </div>
-                        <img src={ChartImg} alt="Dialy chart" />
+                        <img src={ChartImg} alt="Dialy chart" className={styles.miniChart} />
                     </div>
                     <div className={`col-md-3 ${styles.item}`}>
                         <div className ={`${styles.daily}`}>
@@ -74,14 +74,19 @@ const Merchant = () => {
                         </div>
                     </div>
                 </div>
+
+                <h2>Payments</h2>
+
                 <div className={styles.tableHeader}>
-                    <p>20 Out of 500 Payments </p>
+
+                    <p><span className={styles.caret}>20<BiChevronDown /> </span>Out of 500 Payments </p>
                     <span><BiSearch /></span>
                     <input type='search' placeholder='Search' className={styles.tableSearch} />
 
-                    <div className="dropdown">
-                        <button className={`btn btn-default dropdown-toggle ${styles.default}`} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pending
+                    <div className={`dropdown ${styles.default}`}>
+
+                        <button className={`btn btn-default dropdown-toggle `} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            All
                         </button>
                         <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a className="dropdown-item" href="#">All</a>
@@ -91,7 +96,6 @@ const Merchant = () => {
                     </div>
                     {/* <input type='select' placeholder='All' className={styles.dropdown} /> */}
                 </div>
-                <h2>Payments</h2>
                 {/* THIRD ROW  */}
                 <table className={`table ${styles.rowThree}`}>
                     <thead className={styles.tableHead} >

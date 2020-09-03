@@ -1,22 +1,36 @@
 .item {
     background-color: #fff;
+    /* background-color: lawngreen; */
     border: 1px solid #EEF8FD;
     border-radius: 2px;
-    margin: auto;
+    /* margin: 0% 1%; */
+    /* padding: 0%; */
+    /* margin: auto; */
     display: flex;
 }
 .rowOne {
     padding: 3% 0%;
+    /* background-color: lightcoral; */
 }
 .subCol {
     border-bottom: 2px solid #f6f9ff;
     font-family: 'Noto Sans JP', sans-serif;
+    padding: 3%;
+    /* background-color: lightsalmon; */
+
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }.header {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 600;
+    /* background-color: lightgreen; */
+    /* padding: 3%; */
+
 }
 .daily {
-    font-size: 0.6em;
+    font-size: 0.7em;
     padding: 15px 30px;
     line-height: 0.5em;
     color: #787C90;
@@ -24,6 +38,8 @@
 .itemTwo {
     background-color: white;
     border: 2px #f6f9ff solid;
+    /* background-color: lightslategray; */
+    margin-bottom: 2%;
 }
 .progressBarContainer {
     background-color: #FDC203;
@@ -69,13 +85,22 @@
     margin: 0% 15%;
 }
 .caret {
-    color: #CCCFD4;
+    color: #1875F0;
 }
 .caretLeft, .caretRight {
     border: 1px #e3e5e8 solid;
     border-radius: 4.5px;
     background-color: #fff;
     font-size: 2em;
+}
+h2 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+}
+.default {
+    border: 2px solid #E5E5E5;
+    width: 17%;
+    border-radius: 3%;
 }
 .tableRow {
     background-color: #fff;
