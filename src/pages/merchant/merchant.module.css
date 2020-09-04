@@ -1,5 +1,5 @@
 .mainContainer {
-background-color: mediumblue;
+/* background-color: mediumblue; */
 }
 .item {
     background-color: #fff;
@@ -112,10 +112,6 @@ h2 {
     padding: 5% 0%;
     margin: 3% 0;
 }
-.rowFive {
-    display: flex;
-    background-color: maroon;
-}
 .rowThree {
     /* margin: 2% 0%; */
     /* background-color: darkviolet; */
@@ -124,9 +120,13 @@ h2 {
     display: flex;
 
 }
-.tableFooter {
-    display: flex;
-    margin: 2% 0%;
+.rowFive {
+    /* display: flex; */
+    /* margin: 2% 0%; */
+}
+.itemFive {
+    display: flex; 
+    justify-content: space-between;
 }
 .sideItem {
     width: 30px;
@@ -175,6 +175,10 @@ h2 {
     background: transparent;
     transition: all 0.3s ease 0s;
 }
+#button {
+    background-color: mediumblue;
+    color: red;
+}
 .buttonGray {
     font-size: 13px;
     color: #7F8FA4;
@@ -186,8 +190,8 @@ h2 {
 }
 .btnGroup {
     border: 1px solid #E5E5E5  ; 
-    position: relative;
-    left: 55%;                                                                                                                                                                                                                      ;
+    /* position: relative;
+    left: 55%;                                                                                                                                                                                                                      ; */
 }
 .iconsGreen {
     background-color: #27AE60;
@@ -206,13 +210,13 @@ h2 {
 .mainContainer {
     /* width: 100%; */
 }
-.rowFive {
-    width: 80% !important;
-}
 .daily {
     line-height: 0.9em;
 }
 .caret {
+    display: none;
+}
+.buttonGreen, .buttonYellow, .buttonGray, #button {
     display: none;
 }
 }

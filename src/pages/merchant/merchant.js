@@ -98,15 +98,14 @@ const Merchant = () => {
                 </div>
 
                 {/* THIRD ROW  */}
-                <table className={`table ${styles.rowFour}`}>
+                <table className={`table table-responsive ${styles.rowFour}`}>
                     <thead className={styles.tableHead} >
                         <tr>
                             <th scope="col">Item</th>
                             <th scope="col">Price</th>
                             <th scope="col">Transaction Nos</th>
                             <th scope="col">Time</th>
-                            <th scope="col">Button</th>
-                            {/* <th scope="col">Caret</th> */}
+                            <th scope="col" id={"button"}>Button</th>
                         </tr>
                     </thead>
                     <tbody className={styles.tableBody}>
@@ -169,8 +168,8 @@ const Merchant = () => {
                     </tbody>
                 </table>
 
-                <div className={`row ${styles.tableFooter}`}>
-                    <div className={`col-md-12 ${styles.rowFive}`}>
+                <div className={`row ${styles.rowFive}`}>
+                    <div className={`col-md-12 ${styles.itemFive}`}>
                         <p>1 Out of 50 Payments </p>   
 
                         <div className={`btn-group ${styles.btnGroup}`}>
