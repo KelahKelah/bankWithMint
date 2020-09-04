@@ -207,9 +207,6 @@ h2 {
 }
 
 @media screen and (max-width:769px) {
-.mainContainer {
-    /* width: 100%; */
-}
 .daily {
     line-height: 0.9em;
 }
