@@ -39,6 +39,7 @@ const Merchant = () => {
                         <img src={ChartImg} alt="Dialy chart" />
                     </div>
                 </div>
+
                 {/* SECOND ROW */}
                 <div className={`row ${styles.rowTwo}`}>
                     <div className={`col-md-8 ${styles.itemTwo}`}>
@@ -74,30 +75,30 @@ const Merchant = () => {
                         </div>
                     </div>
                 </div>
+               
+                <div className={`row ${styles.rowThree}`}>
+                    <h2>Payments</h2>
+                    <div className={`col-md-12 ${styles.itemThree}`}>
+                        <p><span className={styles.caret}>20<BiChevronDown /> </span>Out of 500 Payments </p>
+                        <span><BiSearch /></span>
+                        <input type='search' placeholder='Search' className={styles.tableSearch} />
 
-                <h2>Payments</h2>
+                        <div className={`dropdown ${styles.default}`}>
 
-                <div className={styles.tableHeader}>
-
-                    <p><span className={styles.caret}>20<BiChevronDown /> </span>Out of 500 Payments </p>
-                    <span><BiSearch /></span>
-                    <input type='search' placeholder='Search' className={styles.tableSearch} />
-
-                    <div className={`dropdown ${styles.default}`}>
-
-                        <button className={`btn btn-default dropdown-toggle `} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            All
-                        </button>
-                        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a className="dropdown-item" href="#">All</a>
-                            <a className="dropdown-item" href="#">Pending</a>
-                            <a className="dropdown-item" href="#">Reconciled</a>
+                            <button className={`btn btn-default dropdown-toggle `} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                All
+                            </button>
+                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a className="dropdown-item" href="#">All</a>
+                                <a className="dropdown-item" href="#">Pending</a>
+                                <a className="dropdown-item" href="#">Reconciled</a>
+                            </div>
                         </div>
                     </div>
-                    {/* <input type='select' placeholder='All' className={styles.dropdown} /> */}
                 </div>
+
                 {/* THIRD ROW  */}
-                <table className={`table ${styles.rowThree}`}>
+                <table className={`table ${styles.rowFour}`}>
                     <thead className={styles.tableHead} >
                         <tr>
                             <th scope="col">Item</th>
@@ -168,15 +169,17 @@ const Merchant = () => {
                     </tbody>
                 </table>
 
-                <div className={styles.tableFooter}>
-                    <p>1 Out of 50 Payments </p>   
+                <div className={`row ${styles.tableFooter}`}>
+                    <div className={`col-md-12 ${styles.rowFive}`}>
+                        <p>1 Out of 50 Payments </p>   
 
-                    <div className={`btn-group ${styles.btnGroup}`}>
-                        <button type="button" className="btn btn-default">Previous</button>
-                        <button type="button" className="btn btn-primary">1</button>
-                        <button type="button" className="btn btn-default">2</button>
-                        <button type="button" className="btn btn-default">Next</button>
-                    </div>                
+                        <div className={`btn-group ${styles.btnGroup}`}>
+                            <button type="button" className="btn btn-default">Previous</button>
+                            <button type="button" className="btn btn-primary">1</button>
+                            <button type="button" className="btn btn-default">2</button>
+                            <button type="button" className="btn btn-default">Next</button>
+                        </div> 
+                    </div>               
                 </div>
         </div>
     )

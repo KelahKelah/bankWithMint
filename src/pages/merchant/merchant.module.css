@@ -1,11 +1,11 @@
+.mainContainer {
+background-color: mediumblue;
+}
 .item {
     background-color: #fff;
     /* background-color: lawngreen; */
     border: 1px solid #EEF8FD;
     border-radius: 2px;
-    /* margin: 0% 1%; */
-    /* padding: 0%; */
-    /* margin: auto; */
     display: flex;
 }
 .rowOne {
@@ -26,8 +26,6 @@
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 600;
     /* background-color: lightgreen; */
-    /* padding: 3%; */
-
 }
 .daily {
     font-size: 0.7em;
@@ -82,10 +80,11 @@
     border-radius: 4.5px;
     background-color: #fff;
     padding: 1%;
-    margin: 0% 15%;
+    margin: 0% 0%;
 }
 .caret {
     color: #1875F0;
+
 }
 .caretLeft, .caretRight {
     border: 1px #e3e5e8 solid;
@@ -105,7 +104,7 @@ h2 {
 .tableRow {
     background-color: #fff;
 }
-.rowThree {
+.rowFour {
     background-color: #fff;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 0.8em;
@@ -113,10 +112,17 @@ h2 {
     padding: 5% 0%;
     margin: 3% 0;
 }
-.tableHeader {
+.rowFive {
     display: flex;
-    margin: 2% 0%;
+    background-color: maroon;
+}
+.rowThree {
+    /* margin: 2% 0%; */
     /* background-color: darkviolet; */
+}
+.itemThree {
+    display: flex;
+
 }
 .tableFooter {
     display: flex;
@@ -134,6 +140,7 @@ h2 {
 }
 .tableSearch {
     margin: 0% 10%;
+    width: 30%;
     border-top: hidden;
     border-left: hidden;
     border-right: hidden;
@@ -193,4 +200,19 @@ h2 {
 .iconsGray {
     background-color: #7F8FA4;
     border-radius: 50%;
+}
+
+@media screen and (max-width:769px) {
+.mainContainer {
+    /* width: 100%; */
+}
+.rowFive {
+    width: 80% !important;
+}
+.daily {
+    line-height: 0.9em;
+}
+.caret {
+    display: none;
+}
 }

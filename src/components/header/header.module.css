@@ -1,9 +1,9 @@
 .wrapper {
     display: flex;
-    /* align-self: center; */
     align-items: center;
     height: 60px;
     background: #FFF;
+    /* background-color: maroon; */
 }
 .logo {
     font-family: Roboto;
@@ -60,15 +60,19 @@
     left: -13px;
     top: -8px
 }
-.list {
-    /* padding: 0% 8%; */
-}
-.lister {
-    background-color: indigo;
-}
+ .list {
+    padding: 0% 8%;
+} 
+
 .photo {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: greenyellow;
+}
+
+@media screen and (max-width: 769px) {
+    .wrapper {
+        display: none;
+    }
 }
