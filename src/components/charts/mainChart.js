@@ -34,7 +34,11 @@ class MyLine extends React.Component {
             };
             return(
                 <div>
-                    <Line data={data} />
+                    <Line data={data} 
+                    width={200}
+                    height={300}
+                    options={{maintainAspectRatio: false}}
+                     />
                 </div>
             )
         }

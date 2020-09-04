@@ -51,4 +51,9 @@ li {
     margin-right: 3%;
 }
 
+@media screen and (max-width: 769px) {
+    .wrapper {
+        display: none;
+    }
+}
 

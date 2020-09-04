@@ -1,9 +1,10 @@
 .wrapper {
     display: flex;
-    /* align-self: center; */
     align-items: center;
     height: 60px;
     background: #FFF;
+    justify-content: space-between;
+    /* background-color: maroon; */
 }
 .logo {
     font-family: Roboto;
@@ -17,8 +18,10 @@
     /* background-color: red; */
     /* border: deeppink; */
     display: flex;
-    position: relative;
-    left: 5%;
+    align-items: center;
+
+    /* position: relative; */
+    /* left: 5%; */
 }   
 .inputField {
     font-family: Segoe UI;
@@ -29,9 +32,10 @@
 }
 .searchIcon {
     font-family: Segoe UI;
-    font-size: 1.7em;
+    font-size: 1em;
     line-height: 16px;
     color: #979797;
+    margin-right: 0.5rem;
     /* background-color: darkviolet; */
     margin-right: 5%;
 }
@@ -42,9 +46,14 @@
     font-size: 1.1em;
     line-height: 19px;
     color: #647787;
+    margin-bottom: 0;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding-left: 0;
+    padding: 0 1rem;
     /* background-color: greenyellow; */
-    position: relative;
-    left: 35%;
+    /* position: relative; */
+    /* left: 15%; */
 } 
 .notificationIcon {
     font-size: 1.2em;
@@ -60,15 +69,22 @@
     left: -13px;
     top: -8px
 }
-.list {
+ .list {
     /* padding: 0% 8%; */
-}
-.lister {
-    background-color: indigo;
-}
+    margin: 0;
+    /* display: inline; */
+    /* display: list-item; */
+} 
+
 .photo {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: greenyellow;
+}
+
+@media screen and (max-width: 769px) {
+    .wrapper {
+        display: none;
+    }
 }
