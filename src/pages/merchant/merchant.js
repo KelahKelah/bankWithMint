@@ -15,7 +15,7 @@ const Merchant = () => {
                             <p>Daily Transaction Volume</p>
                             <p>2,342</p>
                         </div>
-                        <img src={ChartImg} alt="Dialy chart" className={styles.miniChart} />
+                        <img src={ChartImg} alt="Dialy chart" />
                     </div>
                     <div className={`col-md-3 ${styles.item}`}>
                         <div className ={`${styles.daily}`}>
@@ -80,7 +80,7 @@ const Merchant = () => {
                     <h2>Payments</h2>
                     <div className={`col-md-12 ${styles.itemThree}`}>
                         <p><span className={styles.caret}>20<BiChevronDown /> </span>Out of 500 Payments </p>
-                        <span><BiSearch /></span>
+                        {/* <span><BiSearch /></span> */}
                         <input type='search' placeholder='Search' className={styles.tableSearch} />
 
                         <div className={`dropdown ${styles.default}`}>
@@ -98,14 +98,15 @@ const Merchant = () => {
                 </div>
 
                 {/* THIRD ROW  */}
-                <table className={`table table-responsive ${styles.rowFour}`}>
+            <div className={'table-responsive'}>
+                <table className={`table ${styles.rowFour}`}>
                     <thead className={styles.tableHead} >
                         <tr>
                             <th scope="col">Item</th>
                             <th scope="col">Price</th>
                             <th scope="col">Transaction Nos</th>
                             <th scope="col">Time</th>
-                            <th scope="col" id={"button"}>Button</th>
+                            <th scope="col">Button</th>
                         </tr>
                     </thead>
                     <tbody className={styles.tableBody}>
@@ -167,6 +168,7 @@ const Merchant = () => {
 
                     </tbody>
                 </table>
+            </div>
 
                 <div className={`row ${styles.rowFive}`}>
                     <div className={`col-md-12 ${styles.itemFive}`}>
