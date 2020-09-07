@@ -1,3 +1,6 @@
+.mainContainer {
+    width: 100%;
+}
 .item {
     background-color: #fff;
     border: 1px solid #EEF8FD;
@@ -69,12 +72,11 @@
     border: 1px #e3e5e8 solid;
     border-radius: 4.5px;
     background-color: #fff;
-    padding: 1%;
-    margin: 0% 0%;
+    padding: 0.8%;
+    margin: 0% 10%;
 }
 .caret {
     color: #1875F0;
-
 }
 .caretLeft, .caretRight {
     border: 1px #e3e5e8 solid;
@@ -105,6 +107,7 @@ h2 {
 
 .itemThree {
     display: flex;
+    padding: 2%;
 
 }
 
@@ -191,13 +194,22 @@ h2 {
 }
 
 @media screen and (max-width:769px) {
+.mainContainer {
+    width: 100%;
+}
+.dateSearch {
+    display: none;
+}
 .daily {
     line-height: 0.9em;
 }
 .caret {
     display: none;
 }
-.buttonGreen, .buttonYellow, .buttonGray, #button {
+.default {
+    display: none;
+}
+.buttonGreen, .buttonYellow, .buttonGray {
     display: none;
 }
 }

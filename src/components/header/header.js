@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './header.module.css';
 import {FaSearch, FaRegBell } from 'react-icons/fa';
 import ProfileImg from '../../assets/profileImg.png';
 
 
 const Header = () => {
+    const [toggle, setToggle]=useState(false)
 
     return(
         <div className={`${styles.wrapper} `}>
