@@ -142,7 +142,7 @@ h2 {
 }
 .tableBody {
     line-height: 50px;
-    background-color: darkorange;
+    /* background-color: darkorange; */
 }
 .buttonGreen, .iconsGreen {
     font-size: 13px;

@@ -4,6 +4,7 @@ import styles from './merchant.module.css';
 import ChartImg from '../../assets/miniChart.svg';
 import MyLIne from '../../components/charts/mainChart';
 import {BiChevronLeft , BiChevronRight, BiChevronDown,  BiSearch, BiCircle } from 'react-icons/bi';
+import {items} from '../../components/data';
 
 const Merchant = () => {
 
@@ -89,15 +90,16 @@ const Merchant = () => {
                                 All
                             </button>
                             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a className="dropdown-item" href="#">All</a>
-                                <a className="dropdown-item" href="#">Pending</a>
-                                <a className="dropdown-item" href="#">Reconciled</a>
+                                <a className="dropdown-item">All</a>
+                                <a className="dropdown-item">Pending</a>
+                                <a className="dropdown-item">Reconciled</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 {/* THIRD ROW  */}
+             
             <div className={'table-responsive'}>
                 <table className={`table ${styles.rowFour}`}>
                     <thead className={styles.tableHead} >
@@ -110,61 +112,19 @@ const Merchant = () => {
                         </tr>
                     </thead>
                     <tbody className={styles.tableBody}>
-                        <tr className={styles.tableRow}>
-                            <td scope="row"><span className={styles.sideItem}>vw</span>Apple Mac book 15" 250 SSD 12GB</td>
-                            <td>$73430</td>
-                            <td>1234567890</td>
-                            <td>12:30</td>
-                            <button className={`btn btn-light ${styles.buttonYellow}`}><BiCircle className={styles.iconsYellow} />Pending</button>
-                        </tr>
-
-                        <tr className={styles.tableRow}>
-                            <td scope="row"><span className={styles.sideItem}>vw</span>Apple Mac book 15" 250 SSD 12GB</td>
-                            <td>$73430</td>
-                            <td>1234567890</td>
-                            <td>12:30</td>
-                            <button className={`btn btn-light ${styles.buttonGreen}`   }><BiCircle className={styles.iconsGreen}/>Reconciled</button>
-                        </tr>
-
-                        <tr className={styles.tableRow}>
-                            <td scope="row"><span className={styles.sideItem}>vw</span>Apple Mac book 15" 250 SSD 12GB</td>
-                            <td>$73430</td>
-                            <td>1234567890</td>
-                            <td>12:30</td>
-                            <button className={`btn btn-light ${styles.buttonYellow}`   }><BiCircle className={styles.iconsYellow}/>Pending</button>
-                        </tr>
-
-                        <tr className={styles.tableRow}>
-                            <td scope="row"><span className={styles.sideItem}>vw</span>Apple Mac book 15" 250 SSD 12GB</td>
-                            <td>$73430</td>
-                            <td>1234567890</td>
-                            <td>12:30</td>
-                            <button className={`btn btn-light ${styles.buttonGray}`   }><BiCircle className={styles.iconsGray}/>Un-Reconciled</button>
-                        </tr>
-
-                        <tr className={styles.tableRow}>
-                            <td scope="row"><span className={styles.sideItem}>vw</span>Apple Mac book 15" 250 SSD 12GB</td>
-                            <td>$73430</td>
-                            <td>1234567890</td>
-                            <td>12:30</td>
-                            <button className={`btn btn-light ${styles.buttonGreen}`   }><BiCircle className={styles.iconsGreen}/>Reconciled</button>
-                        </tr>
-
-                        <tr className={styles.tableRow}>
-                            <td scope="row"><span className={styles.sideItem}>vw</span>Apple Mac book 15" 250 SSD 12GB</td>
-                            <td>$73430</td>
-                            <td>1234567890</td>
-                            <td>12:30</td>
-                            <button className={`btn btn-light ${styles.buttonYellow}`   }><BiCircle className={styles.iconsYellow}/>Pending</button>
-                        </tr>
-
-                        <tr className={styles.tableRow}>
-                            <td scope="row"><span className={styles.sideItem}>vw</span>Apple Mac book 15" 250 SSD 12GB</td>
-                            <td>$73430</td>
-                            <td>1234567890</td>
-                            <td>12:30</td>
-                            <button className={`btn btn-light ${styles.buttonGray}`   }><BiCircle className={styles.iconsGray}/>Un-Reconciled</button>
-                        </tr>
+                        {
+                            items.length > 0 && items.map((item, index) => {
+                                return(
+                                    <tr key={index}>
+                                        <td scope="row"><span className={styles.sideItem}>vw</span>{item.productName}</td>
+                                        <td>{item.amount}</td>
+                                        <td>{item.productNo}</td>
+                                        <td>{item.time}</td>
+                                        <button className={`btn btn-light ${styles.buttonYellow}`}><BiCircle className={styles.iconsYellow} />{item.status}</button>                           
+                                    </tr>
+                                )
+                            })
+                        }
 
                     </tbody>
                 </table>
