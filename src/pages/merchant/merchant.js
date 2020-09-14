@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 // import Layout from '../../components/layout/layout';
 import styles from './merchant.module.css';
 import ChartImg from '../../assets/miniChart.svg';
@@ -7,6 +7,11 @@ import {BiChevronLeft , BiChevronRight, BiChevronDown,  BiSearch, BiCircle } fro
 import {items} from '../../components/data';
 
 const Merchant = () => {
+    const [notification, setNotification] = useState(0);
+
+    useEffect (() => {
+        
+    })
 
     return(
             <div className={`container ${styles.mainContainer}`}>

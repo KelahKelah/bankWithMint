@@ -10,7 +10,7 @@ class MyLine extends React.Component {
                 datasets: [
                 {
                     label: '',
-                    fill: false,
+                    fill: true,
                     lineTension: 0.1,
                     // backgroundColor: 'linear-gradient(180deg, rgba(2, 148, 255, 0.45) 33.13%, rgba(255, 255, 255, 0.0001) 117.06%)',
                     backgroundColor: 'rgba(2, 148, 255, 0.45)',
