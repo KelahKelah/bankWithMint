@@ -6,9 +6,14 @@
     border: 1px solid #EEF8FD;
     border-radius: 2px;
     display: flex;
+    width: 24%;
 }
 .rowOne {
     padding: 3% 0%;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 .subCol {
     border-bottom: 2px solid #f6f9ff;
@@ -28,6 +33,11 @@
     line-height: 0.5em;
     color: #787C90;
 }
+.ChartImg {
+    /* width: 50px; */
+    /* background-color: #fff; */
+    /* background-color: indigo; */
+    }
 .itemTwo {
     background-color: white;
     border: 2px #f6f9ff solid;
@@ -62,6 +72,7 @@
     display: flex;
     margin: 2.5% 0%;
 }
+
 .date {
     font-weight: 700;
     font-size: 1em;
@@ -104,11 +115,9 @@ h2 {
     padding: 5% 0%;
     margin: 3% 0;
 }
-
 .itemThree {
     display: flex;
     padding: 2%;
-
 }
 
 .itemFive {
@@ -139,6 +148,9 @@ h2 {
 }
 .tableHead {
     line-height: 30px;
+}
+.hamburger {
+    display: none;
 }
 .tableBody {
     line-height: 50px;
@@ -183,6 +195,7 @@ h2 {
 .iconsGreen {
     background-color: #27AE60;
     border-radius: 50%; 
+
 }
 .iconsYellow {
    background-color: #EBC315;
@@ -194,22 +207,41 @@ h2 {
 }
 
 @media screen and (max-width:769px) {
-.mainContainer {
-    width: 100%;
-}
-.dateSearch {
-    display: none;
-}
-.daily {
-    line-height: 0.9em;
-}
-.caret {
-    display: none;
-}
-.default {
-    display: none;
-}
-.buttonGreen, .buttonYellow, .buttonGray {
-    display: none;
-}
+    .mainContainer {
+        width: 100%;
+    }
+    .rowOne {
+        /* padding: 3% 0%; */
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .item {
+        background-color: #fff;
+        border: 1px solid #EEF8FD;
+        border-radius: 2px;
+        display: flex;
+        width: 24%;
+    }
+    .ChartImg {
+        width: 3px
+    }
+    .hamburger {
+        display: block;
+    }
+    .dateSearch {
+        display: none;
+    }
+    .daily {
+        line-height: 0.9em;
+        padding: 2px 2px;
+    }
+    .caret {
+        display: none;
+    }
+    .default {
+        display: none;
+    }
+
 }
