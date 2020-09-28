@@ -58,10 +58,12 @@ const items = [
 ]
 
 const chart = [
-    {item: 'Daily transaction Volume', amount: 2342},
-    {item: 'Daily transaction Volume', amount: 4000000},
-    {item: 'Daily transaction Volume', amount: 452000},
-    {item: 'Daily transaction Volume', amount: 4000000},
+    {item: 'Daily transaction Volume', amount: 2342, img: './../miniChart.svg'},
+    {item: 'Daily transaction Volume', amount: 4000000, img: './../miniChart.svg'},
+    {item: 'Daily transaction Volume', amount: 452000, img: './../miniChart.svg'},
+    {item: 'Daily transaction Volume', amount: 4000000, img: './../miniChart.svg'},
 ]
+
+
 
 export {items, chart};

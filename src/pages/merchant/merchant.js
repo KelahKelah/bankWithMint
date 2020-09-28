@@ -15,6 +15,7 @@ const Merchant = () => {
 
     return(
             <div className={`container ${styles.mainContainer}`}>
+                {/* FIRST ROW STARTS */}
                 <div className={`row ${styles.rowOne}`}>
                     <div className={`col-md-3 ${styles.item}`}>
                         <div className ={`${styles.daily}`}>
@@ -45,6 +46,18 @@ const Merchant = () => {
                         <img src={ChartImg} alt="Dialy chart" />
                     </div>
                 </div>
+
+                <div className={`row ${styles.rowOne}`}>
+                    <div className={`col-md-3 ${styles.item}`}>
+                        <div className ={`${styles.daily}`}>
+                            <p>Daily Transaction Volume</p>
+                            <p>2,342</p>
+                        </div>
+                        <img src={ChartImg} alt="Dialy chart" />
+                    </div>
+                </div>
+                {/* FIRST ROW ENDS  */}
+
 
                 {/* SECOND ROW */}
                 <div className={`row ${styles.rowTwo}`}>
