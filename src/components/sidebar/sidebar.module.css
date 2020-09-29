@@ -20,11 +20,6 @@
     font-size: 0.9em;
     border: none;
 }
-.content {
-    /* background-color: lightgreen; */
-    /* padding: 10% 0%; */
-    /* line-height: 10px; */
-}
 .sideBarHeader {
 display: flex;
 justify-content: center;
@@ -53,7 +48,7 @@ li {
 
 @media screen and (max-width: 769px) {
     .wrapper {
-        display: none;
+        /* display: none; */
     }
 }
 
