@@ -165,7 +165,7 @@ const Merchant = () => {
                 <div className="modal-dialog modal-sm">
                     <div className="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title"><span className={`btn btn-light ${styles.buttonYellow}`}></span>Pending</h5>
+                            <h5 class="modal-title"><span className={`btn btn-light mr-2 ${styles.buttonYellow}`}></span>Pending</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
@@ -185,7 +185,7 @@ const Merchant = () => {
                 <div className="modal-dialog modal-sm">
                     <div className="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title"><span className={`btn btn-light ${styles.buttonGreen}`}></span>Reconciled</h5>
+                            <h5 class="modal-title"><span className={`btn btn-light mr-2 ${styles.buttonGreen}`}></span>Reconciled</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
@@ -205,7 +205,7 @@ const Merchant = () => {
                 <div className="modal-dialog modal-sm">
                     <div className="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title"><span className={`btn btn-light ${styles.buttonGray}`}></span>Un-reconciled</h5>
+                            <h5 class="modal-title"><span className={`btn btn-light mr-2 ${styles.buttonGray}`}></span>Un-reconciled</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
