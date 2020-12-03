@@ -1,3 +1,5 @@
+import Img from '../assets/miniChart.svg'
+
 const items = [
     {
         productName: 'Apple Mac book 15" 250 SSD 12GB',
@@ -58,10 +60,12 @@ const items = [
 ]
 
 const chart = [
-    {item: 'Daily transaction Volume', amount: 2342},
-    {item: 'Daily transaction Volume', amount: 4000000},
-    {item: 'Daily transaction Volume', amount: 452000},
-    {item: 'Daily transaction Volume', amount: 4000000},
+    {item: 'Daily transaction Volume', amount: 2342, img: Img},
+    {item: 'Daily transaction Volume', amount: 4000000, img: Img},
+    {item: 'Daily transaction Volume', amount: 452000, img: Img},
+    {item: 'Daily transaction Volume', amount: 4000000, img: Img}
 ]
+
+
 
 export {items, chart};

@@ -15,7 +15,7 @@ const Sidebar = () => {
                 </ul>
                 <h6 className={styles.sideBarHeader}>Payments</h6>
                 <ul className={styles.ulHeader}>
-                    <li className={'active'}><BiWallet className={styles.icons} />Overview</li>
+                    <li className={styles.active}><BiWallet className={styles.icons} />Overview</li>
                     <li><BiWalletAlt className={styles.icons} />Reconciled Payments</li>
                     <li><BiWalletAlt className={styles.icons} />Un-reconciled Payements</li>
                     <li><BiRadioCircleMarked className={styles.icons} />Manual Settlement</li>

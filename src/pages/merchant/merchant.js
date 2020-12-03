@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
-// import Layout from '../../components/layout/layout';
 import styles from './merchant.module.css';
-import ChartImg from '../../assets/miniChart.svg';
 import MyLIne from '../../components/charts/mainChart';
 import {BiChevronLeft , BiChevronRight, BiChevronDown,  BiSearch, BiCircle } from 'react-icons/bi';
-import {items} from '../../components/data';
+import {items, chart} from '../../components/data';
+import { BiWallet, BiWalletAlt, BiTachometer, BiRadioCircleMarked, BiSpreadsheet, BiUser, BiMenu} from 'react-icons/bi';
+// IMPORTING CSS SIDEBAR HERE FOR THE SIDEBAR 
+// import sideBarStyles from '../../components/sidebar/sidebar.module.css';
+
 
 const Merchant = () => {
     const [notification, setNotification] = useState(0);
+    const [sideBarToggle, setSideBarToggle] = useState(false)
 
     useEffect (() => {
         
@@ -15,39 +18,55 @@ const Merchant = () => {
 
     return(
             <div className={`container ${styles.mainContainer}`}>
-                <div className={`row ${styles.rowOne}`}>
-                    <div className={`col-md-3 ${styles.item}`}>
-                        <div className ={`${styles.daily}`}>
-                            <p>Daily Transaction Volume</p>
-                            <p>2,342</p>
-                        </div>
-                        <img src={ChartImg} alt="Dialy chart" />
-                    </div>
-                    <div className={`col-md-3 ${styles.item}`}>
-                        <div className ={`${styles.daily}`}>
-                            <p>Daily Transaction Volume</p>
-                            <p>4,000,000</p>
-                        </div>
-                        <img src={ChartImg} alt="Dialy chart" />
-                    </div>
-                    <div className={`col-md-3 ${styles.item}`}>
-                        <div className ={`${styles.daily}`}>
-                            <p>Daily Transaction Volume</p>
-                            <p>452,000</p>
-                        </div>
-                        <img src={ChartImg} alt="Dialy chart" />
-                    </div>
-                    <div className={`col-md-3 ${styles.item}`}>
-                        <div className ={`${styles.daily}`}>
-                            <p>Daily Transaction Volume</p>
-                            <p>4,000,000</p>
-                        </div>
-                        <img src={ChartImg} alt="Dialy chart" />
-                    </div>
+                <div className={styles.hamburger} onClick={() => {setSideBarToggle(true)}}>
+                    <BiMenu />
                 </div>
 
+                {/* SIDE BAR  */}
+            {/* <div className={sideBarStyles.wrapper}>
+                <button className={sideBarStyles.invoice}>Generate Invoice</button>
+                <div className={sideBarStyles.content} >
+                    <ul className={sideBarStyles.ulHeader}>
+                        <li><BiTachometer className={sideBarStyles.icons} />All Payments</li>
+                    </ul>
+                    <h6 className={sideBarStyles.sideBarHeader}>Payments</h6>
+                    <ul className={sideBarStyles.ulHeader}>
+                        <li className={'active'}><BiWallet className={sideBarStyles.icons} />Overview</li>
+                        <li><BiWalletAlt className={sideBarStyles.icons} />Reconciled Payments</li>
+                        <li><BiWalletAlt className={sideBarStyles.icons} />Un-reconciled Payements</li>
+                        <li><BiRadioCircleMarked className={sideBarStyles.icons} />Manual Settlement</li>
+                    </ul>
+                    <h6 className={sideBarStyles.sideBarHeader}>Orders</h6>
+                    <ul className={sideBarStyles.ulHeader}>
+                        <li><BiSpreadsheet className={sideBarStyles.icons} />All orders</li>
+                        <li><BiSpreadsheet className={sideBarStyles.icons} />Pending orders</li>
+                        <li><BiSpreadsheet className={sideBarStyles.icons} />Reconciled orders</li>
+                        <li><BiUser className={sideBarStyles.icons} />Merchant</li>
+                    </ul>
+                </div>
+            </div> */}
+                {/* SIDEBAR ENDS  */}
+
+                {/* FIRST ROW STARTS  */}
+                <div  className={styles.rowOne}>
+                {
+                    chart.length>0 && chart.map((chartItem, index) => {
+                        return(
+                        <div key={index} className={styles.item}>
+                            <div className ={styles.daily}>
+                                <p>{chartItem.item}</p>
+                                <p>{chartItem.amount}</p>
+                            </div>
+                            <img src={chartItem.img} alt="Dialy chart" className={styles.ChartImg} />
+                        </div>
+                        )
+                    })
+                }
+                </div>
+                {/* FIRST ROW ENDS  */}
+
                 {/* SECOND ROW */}
-                <div className={`row ${styles.rowTwo}`}>
+                <div className={`row mx-0 ${styles.rowTwo}`}>
                     <div className={`col-md-8 ${styles.itemTwo}`}>
                         <div className={styles.chartItem}>
                             <h3 className={styles.date}>Today: 5, Aug 2018</h3>
@@ -57,7 +76,7 @@ const Merchant = () => {
                                 <BiChevronRight className={styles.caretRight} />
                             </div>
                         </div>
-                       
+                        
                         <MyLIne />
                     </div>
                     <div className={`col-md-4 ${styles.itemTwo}`}>
@@ -82,7 +101,7 @@ const Merchant = () => {
                     </div>
                 </div>
                
-                <div className={`row ${styles.rowThree}`}>
+                <div className={`row mx-0 ${styles.rowThree}`}>
                     <h2>Payments</h2>
                     <div className={`col-md-12 ${styles.itemThree}`}>
                         <p><span className={styles.caret}>20<BiChevronDown /> </span>Out of 500 Payments </p>
@@ -125,7 +144,12 @@ const Merchant = () => {
                                         <td>{item.amount}</td>
                                         <td>{item.productNo}</td>
                                         <td>{item.time}</td>
-                                        <button className={`btn btn-light ${styles.buttonYellow}`}><BiCircle className={styles.iconsYellow} />{item.status}</button>                           
+                                        {
+                                            item.status === 'Pending' ? <td><button className={`btn btn-light ${styles.buttonYellow}`} type="button" data-toggle="modal" data-target=".yellow"><BiCircle className={`mr-1 ${styles.iconsYellow}`} />{item.status}</button></td>  
+                                            : item.status === 'Reconciled' ? <td><button className={`btn btn-light ${styles.buttonGreen}`} type="button" data-toggle="modal" data-target=".green" ><BiCircle className={`mr-1 ${styles.iconsGreen}`} />{item.status}</button></td>    
+                                            : item.status === 'Un-reconciled' ? <td><button className={`btn btn-light ${styles.buttonGray}`} type="button" data-toggle="modal" data-target=".gray"><BiCircle className={`mr-1 ${styles.iconsGray}`} />{item.status}</button></td>
+                                            : null                          
+                                        }
                                     </tr>
                                 )
                             })
@@ -134,6 +158,67 @@ const Merchant = () => {
                     </tbody>
                 </table>
             </div>
+
+            {/* MODALS FROM TABLE BUTTONS  */}
+            {/* YELLOW STARTS */}
+            <div className="modal fade yellow" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-sm">
+                    <div className="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title"><span className={`btn btn-light ${styles.buttonYellow}`}></span>Pending</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Apple Mac book 15</p>
+                            <p>Price:$73430</p>
+                            <p>Number:1234567890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* YELLOW ENDS  */}
+
+            {/* GREEN STARTS  */}
+            <div className="modal fade green" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-sm">
+                    <div className="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title"><span className={`btn btn-light ${styles.buttonGreen}`}></span>Reconciled</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Apple Mac book 15</p>
+                            <p>Price:$73430</p>
+                            <p>Number:1234567890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* GREEN ENDS  */}
+
+            {/* GRAY STARTS  */}
+            <div className="modal fade gray" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-sm">
+                    <div className="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title"><span className={`btn btn-light ${styles.buttonGray}`}></span>Un-reconciled</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Apple Mac book 15</p>
+                            <p>Price:$73430</p>
+                            <p>Number:1234567890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* GRAY ENDS  */}
 
                 <div className={`row ${styles.rowFive}`}>
                     <div className={`col-md-12 ${styles.itemFive}`}>
