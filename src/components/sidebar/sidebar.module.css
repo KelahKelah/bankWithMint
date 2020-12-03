@@ -25,7 +25,10 @@ display: flex;
 justify-content: center;
 }
 .active {
-    background-color: #647787;
+    background-color: #e6f2ff;
+    max-width: 100%;
+    text-align: center;
+    color: #414e58;
 }
 .ulHeader {
     font-size: 0.9em;

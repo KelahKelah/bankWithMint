@@ -145,9 +145,9 @@ const Merchant = () => {
                                         <td>{item.productNo}</td>
                                         <td>{item.time}</td>
                                         {
-                                            item.status === 'Pending' ? <td><button className={`btn btn-light ${styles.buttonYellow}`}><BiCircle className={`mr-1 ${styles.iconsYellow}`} />{item.status}</button></td>  
-                                            : item.status === 'Reconciled' ? <td><button className={`btn btn-light ${styles.buttonGreen}`}><BiCircle className={`mr-1 ${styles.iconsGreen}`} />{item.status}</button></td>    
-                                            : item.status === 'Un-reconciled' ? <td><button className={`btn btn-light ${styles.buttonGray}`}><BiCircle className={`mr-1 ${styles.iconsGray}`} />{item.status}</button></td>
+                                            item.status === 'Pending' ? <td><button className={`btn btn-light ${styles.buttonYellow}`} type="button" data-toggle="modal" data-target=".yellow"><BiCircle className={`mr-1 ${styles.iconsYellow}`} />{item.status}</button></td>  
+                                            : item.status === 'Reconciled' ? <td><button className={`btn btn-light ${styles.buttonGreen}`} type="button" data-toggle="modal" data-target=".green" ><BiCircle className={`mr-1 ${styles.iconsGreen}`} />{item.status}</button></td>    
+                                            : item.status === 'Un-reconciled' ? <td><button className={`btn btn-light ${styles.buttonGray}`} type="button" data-toggle="modal" data-target=".gray"><BiCircle className={`mr-1 ${styles.iconsGray}`} />{item.status}</button></td>
                                             : null                          
                                         }
                                     </tr>
@@ -158,6 +158,67 @@ const Merchant = () => {
                     </tbody>
                 </table>
             </div>
+
+            {/* MODALS FROM TABLE BUTTONS  */}
+            {/* YELLOW STARTS */}
+            <div className="modal fade yellow" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-sm">
+                    <div className="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title"><span className={`btn btn-light ${styles.buttonYellow}`}></span>Pending</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Apple Mac book 15</p>
+                            <p>Price:$73430</p>
+                            <p>Number:1234567890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* YELLOW ENDS  */}
+
+            {/* GREEN STARTS  */}
+            <div className="modal fade green" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-sm">
+                    <div className="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title"><span className={`btn btn-light ${styles.buttonGreen}`}></span>Reconciled</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Apple Mac book 15</p>
+                            <p>Price:$73430</p>
+                            <p>Number:1234567890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* GREEN ENDS  */}
+
+            {/* GRAY STARTS  */}
+            <div className="modal fade gray" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-sm">
+                    <div className="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title"><span className={`btn btn-light ${styles.buttonGray}`}></span>Un-reconciled</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Apple Mac book 15</p>
+                            <p>Price:$73430</p>
+                            <p>Number:1234567890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* GRAY ENDS  */}
 
                 <div className={`row ${styles.rowFive}`}>
                     <div className={`col-md-12 ${styles.itemFive}`}>
