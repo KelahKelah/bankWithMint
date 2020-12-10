@@ -164,13 +164,13 @@ const Merchant = () => {
             <div className="modal fade yellow" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-sm">
                     <div className="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title"><span className={`btn btn-light mr-2 ${styles.buttonYellow}`}></span>Pending</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <div className="modal-header">
+                            <h5 className="modal-title"><span className={`btn btn-light mr-2 ${styles.buttonYellow}`}></span>Pending</h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             <p>Apple Mac book 15</p>
                             <p>Price:$73430</p>
                             <p>Number:1234567890</p>
@@ -184,13 +184,13 @@ const Merchant = () => {
             <div className="modal fade green" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-sm">
                     <div className="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title"><span className={`btn btn-light mr-2 ${styles.buttonGreen}`}></span>Reconciled</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <div className="modal-header">
+                            <h5 className="modal-title"><span className={`btn btn-light mr-2 ${styles.buttonGreen}`}></span>Reconciled</h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             <p>Apple Mac book 15</p>
                             <p>Price:$73430</p>
                             <p>Number:1234567890</p>
@@ -204,13 +204,13 @@ const Merchant = () => {
             <div className="modal fade gray" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-sm">
                     <div className="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title"><span className={`btn btn-light mr-2 ${styles.buttonGray}`}></span>Un-reconciled</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <div className="modal-header">
+                            <h5 className="modal-title"><span className={`btn btn-light mr-2 ${styles.buttonGray}`}></span>Un-reconciled</h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             <p>Apple Mac book 15</p>
                             <p>Price:$73430</p>
                             <p>Number:1234567890</p>
