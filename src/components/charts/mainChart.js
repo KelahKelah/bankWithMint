@@ -1,49 +1,60 @@
 import React from 'react';
 import {Line} from 'react-chartjs-2';
+import {data, labels} from '../data';
 
- 
 class MyLine extends React.Component {  
 
-        render(){
+    constructor(props) {
+        super(props);
+        this.chartReference = React.createRef();
+        this.state = {
+            dataItem: [],
+            labelItem: []
+        }
+    }
+
+    componentDidMount() {
+            this.setState({dataItem:data});
+            this.setState({labelItem:labels});  
+    }
+            render(){
             var data = {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                labels: this.state.labelItem,
                 datasets: [
                 {
-                    label: '',
+                    label: 'Transactions',
                     fill: true,
                     lineTension: 0.1,
-                    // backgroundColor: 'linear-gradient(180deg, rgba(2, 148, 255, 0.45) 33.13%, rgba(255, 255, 255, 0.0001) 117.06%)',
                     backgroundColor: 'rgba(2, 148, 255, 0.45)',
                     borderColor: 'rgba(2, 148, 255, 0.45)',
                     borderCapStyle: 'butt',
-                    borderDash: [],
+                    borderDash: [3],
                     borderDashOffset: 0.0,
                     borderJoinStyle: 'miter',
                     pointBorderColor: 'rgba(2, 148, 255, 0.45)',
                     pointBackgroundColor: '#fff',
-                    pointBorderWidth: 1,
+                    pointBorderWidth: 3,
                     pointHoverRadius: 5,
                     pointHoverBackgroundColor: 'rgba(2, 148, 255, 0.45)',
                     pointHoverBorderColor: 'rgba(2, 148, 255, 0.45)',
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 10,
-                    data: [65, 59, 80, 81, 56, 55, 40]
+                    data:this.state.dataItem
                 }
                 ]
             };
             return(
                 <div>
                     <Line data={data} 
-                    width={200}
-                    height={300}
+                    width={250}
+                    height={350}
                     options={{maintainAspectRatio: false}}
                      />
                 </div>
             )
         }
-        } 
+    } 
        
-        
 export default MyLine;
 
