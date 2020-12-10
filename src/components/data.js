@@ -59,6 +59,7 @@ const items = [
     },
 ]
 
+// MINI CHARTS DATA
 const chart = [
     {item: 'Daily transaction Volume', amount: 2342, img: Img},
     {item: 'Daily transaction Volume', amount: 4000000, img: Img},
@@ -66,6 +67,11 @@ const chart = [
     {item: 'Daily transaction Volume', amount: 4000000, img: Img}
 ]
 
+// CHART DATA FOR LABELS X-AXIS
+ const labels = ['January',10,20,30, 'February', 10, 20, 30, 'March', 15, 25, 'April', 25,30,'May', 10,20,30,'June', 15, 'July',10,20,30,'Aug',20,'Sept','Oct',15,'Nov','Dec']
+
+// CHART DATA Y-AXIS
+ const data = [65, 59, 80, 81, 56, 55, 40,30,7,39,50,0,10,49,50,30,25,21,30,45,70,90,90,100,80,20,37,78,70,40,21]
 
 
-export {items, chart};
+export {data, labels, chart, items};
