@@ -17,12 +17,10 @@ const Sidebar = () => {
                 </ul>
                 <h6 className="sideBarHeader">Payments</h6>
                 <ul className="ulHeader">
-                    <BrowserRouter>
-                   <li><Link className="linkTag" to="/" className='active'><BiWallet />Overview</Link></li>
-                    <li><Link className="linkTag" to="/reconciled"><BiTachometer />Reconciled Payments</Link></li>
-                    <li><Link className="linkTag" to="/unreconciled"><BiTachometer />Un-reconciled Payements</Link></li>
-                    <li><Link className="linkTag" to="/reconciled"><BiRadioCircleMarked />Manual Settlement</Link></li>
-                    </BrowserRouter>
+                   <li><a className="linkTag" href="/" className='active'><BiWallet />Overview</a></li>
+                    <li><a className="linkTag" href="/reconciled"><BiTachometer />Reconciled Payments</a></li>
+                    <li><a className="linkTag" href="/unreconciled"><BiTachometer />Un-reconciled Payements</a></li>
+                    <li><a className="linkTag" href="/reconciled"><BiRadioCircleMarked />Manual Settlement</a></li>
                 </ul>
                 <h6 className="sideBarHeader">Orders</h6>
                 <ul className='ulHeader'>
