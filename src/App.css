@@ -1,4 +1,10 @@
 
 .item {
   display: flex;
+  background-color: blue;
+  width: 100vw;
+}
+.items-layout {
+  width:80vw;
+  background-color:pink;
 }

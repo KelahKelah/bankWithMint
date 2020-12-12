@@ -1,5 +1,5 @@
 .wrapper {
-    width: 260px;
+    /* width: 260px; */
     min-height: 618px;
     left: 1px;
     top: 0px;
@@ -44,6 +44,16 @@ li {
     display: flex;
     margin: 5%;
 }
+
+.linkTag {
+    padding: 2% 0%;
+    list-style: none;
+    font-size: 14px;
+    line-height: 15px;
+    color: #647787;
+    display: flex;
+    margin: 5%;
+}
 .icons {
     font-size: 1.7em;
     margin-right: 3%;
@@ -51,7 +61,7 @@ li {
 
 @media screen and (max-width: 769px) {
     .wrapper {
-        /* display: none; */
+
     }
 }
 

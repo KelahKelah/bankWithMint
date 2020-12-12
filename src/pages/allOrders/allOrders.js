@@ -5,7 +5,7 @@ const AllOrders = () => {
 
     return(
         <div>
-            
+            <p>I am all All orders</p>
         </div>
     )
 }
