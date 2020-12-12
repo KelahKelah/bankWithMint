@@ -8,12 +8,12 @@ import Merchant from './pages/merchant/merchant';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <div className='item'>
-        <Siderbar className="sider-bar-layout" />
+    <div>
+      {/* <Header /> */}
+      {/* <div className='item'> */}
+        {/* <Siderbar className="sider-bar-layout" /> */}
         <Routes className="items-layout"/>
-      </div>
+      {/* </div> */}
     </div>
   );
 }

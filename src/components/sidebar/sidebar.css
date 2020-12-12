@@ -1,5 +1,9 @@
 .wrapper {
     /* width: 260px; */
+    /* position: fixed;
+    background-color: white;
+    z-index: 5;
+    padding-top: 59px; */
     min-height: 618px;
     left: 1px;
     top: 0px;

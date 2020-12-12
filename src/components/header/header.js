@@ -8,7 +8,7 @@ const Header = () => {
     const [toggle, setToggle]=useState(false)
 
     return(
-        <div className={`${styles.wrapper} `}>
+        <div className={`${styles.wrapper} sticky-top`}>
             <section className={"d-flex"} style={{flexGrow: 4}}>
             <div className={styles.logo}>
                 <b>TransMonitor</b>
